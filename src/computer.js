@@ -5,10 +5,16 @@ class Computer {
     this.processor = processor;
     this.memory = memory;
     this.graphics = graphics;
+    this.on = false
   }
-  power(on = false) {
-    this.on = on;
-    return on;
+  power() {
+    if (this.on === false) {
+      return this.on = true
+    } else {
+      if (this.on === true) {
+        return this.on = false
+      }
+    }
   }
 
 }
