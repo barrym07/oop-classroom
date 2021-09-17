@@ -1,7 +1,7 @@
 const expect = require('chai').expect
 const Desk = require('../src').Desk
 
-describe('Desk', function () {
+xdescribe('Desk', function () {
   before(function () {
     this.properties = [60, 48, 48, false]
   })
