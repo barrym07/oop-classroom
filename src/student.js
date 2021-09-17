@@ -5,6 +5,15 @@ class Student {
     this.assignments = [];
   }
 
+  study() {
+    if (this.skillLevel < 100) {
+      this.skillLevel += 1;
+
+    }
+    return this;
+
+  }
+
 }
 
 module.exports = Student
