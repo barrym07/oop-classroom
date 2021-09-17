@@ -21,7 +21,7 @@ class Student {
       }
       return;
     }
-    if (homework.skillLevel && homework.skillLevel > 1 && homework.skillLevel < 100) {
+    if (homework.skillLevel && homework.skillLevel > 0 && homework.skillLevel <= 100) {
       if (homework.skillLevel < this.skillLevel) {
         homework.completed = true
       }

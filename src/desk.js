@@ -15,8 +15,6 @@ class Desk {
       this.content = "";
     }
   }
-
-
 }
 
 module.exports = Desk
