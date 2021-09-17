@@ -6,8 +6,16 @@ class Marker {
 
   }
   write(word) {
-    this.remainingInk = remainingInk - word.replace(/\s/g, '').length;
-    return word;
+    let letterCount = word.length;
+    this.remainingInk -= word.replace(/\s/g, '').length;
+
+    if (this.remainingInk < letterCount) {
+      return word.slice(0, letterCount);
+
+    } else {
+      return word;
+    }
+
 
   }
 
