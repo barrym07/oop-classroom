@@ -6,7 +6,15 @@ class Desk {
     this.isWhiteboard = isWhiteboard;
     this.content = "";
   }
+  write(input) {
+    this.content += input;
+  }
 
+  wipe() {
+    if (this.isWhiteboard === true) {
+      this.content = "";
+    }
+  }
 
 
 }
