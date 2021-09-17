@@ -10,7 +10,7 @@ class Marker {
     this.remainingInk -= word.replace(/\s/g, '').length;
 
     if (this.remainingInk < letterCount) {
-      return word.slice(0, letterCount);
+      return word.slice(0, this.remainingInk);
 
     } else {
       return word;

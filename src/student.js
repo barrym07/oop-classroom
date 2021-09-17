@@ -13,10 +13,17 @@ class Student {
   }
 
   doHomework(homework) {
-    if (homework.skillLevel > 1 || homework.skillLevel < 100 || homework.skillLevel != undefined) {
+    if (homework === undefined) {
+      for (let assignment of this.assignments) {
+        if (assignment.skillLevel <= this.skillLevel) {
+          assignment.completed = true;
+        }
+      }
+      return;
+    }
+    if (homework.skillLevel && homework.skillLevel > 1 && homework.skillLevel < 100) {
       if (homework.skillLevel < this.skillLevel) {
         homework.completed = true
-
       }
       else {
         homework.completed = false;
@@ -24,7 +31,6 @@ class Student {
       return this.assignments.push(homework);
     }
   }
-
 }
 
 module.exports = Student
